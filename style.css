@@ -244,6 +244,27 @@ body {
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.06);
 }
+/* ========= JOIN / FORM ========= */
+.join-section {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact-form {
+    max-width: 420px;
+    background: #10111a;
+    border-radius: 18px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ADD THIS HERE 👇 */
+.form-status {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    opacity: 0.95;
+    color: #8ae58a; /* soft green success color */
+}
 
 .form-row {
     display: flex;
@@ -313,3 +334,4 @@ body {
         flex-wrap: wrap;
     }
 }
+
