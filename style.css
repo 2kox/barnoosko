@@ -66,14 +66,12 @@ body {
     align-items: center;
 }
 
-/* logo in hero above title */
 .hero-logo {
-    height: 180px;        /* BIGGER LOGO */
+    height: 180px;
     width: auto;
     display: block;
-
-    margin-bottom: 2rem;  /* SPACE under logo */
-    margin-top: -40px;    /* MOVE LOGO UP */
+    margin-bottom: 2rem;
+    margin-top: -40px;
 }
 
 .hero-text h1 {
@@ -94,7 +92,6 @@ body {
     gap: 0.8rem;
 }
 
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -134,7 +131,6 @@ body {
     width: 100%;
 }
 
-/* Hero image placeholder */
 .hero-image {
     display: flex;
     justify-content: center;
@@ -203,16 +199,12 @@ body {
     padding: 0.8rem;
 }
 
-.card-placeholder {
+.card-img {
     width: 100%;
     aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 14px;
-    border: 1px dashed rgba(255, 255, 255, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    opacity: 0.75;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .card-body {
@@ -306,4 +298,3 @@ body {
         flex-wrap: wrap;
     }
 }
-
