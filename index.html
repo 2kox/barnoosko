@@ -26,7 +26,6 @@
     <!-- ============ HERO SECTION ============ -->
     <section id="home" class="hero">
         <div class="hero-text">
-            <!-- LOGO ABOVE THE BIG TITLE -->
             <img src="logo.png" alt="barnoosko logo" class="hero-logo">
 
             <h1>barnoosko</h1>
@@ -38,8 +37,7 @@
         </div>
 
         <div class="hero-image">
-            <!-- replace with your own banner art -->
-            <div class="hero-placeholder" aria-label="Comic art coming soon">
+            <div class="hero-placeholder">
                 <span>Comic Art Coming Soon</span>
             </div>
         </div>
@@ -66,10 +64,11 @@
         </p>
 
         <div class="card-grid">
+
             <!-- Card 1 -->
             <article class="card">
                 <div class="card-image">
-                    <div class="card-placeholder" aria-label="Night Shift Legends cover art">Cover Art</div>
+                    <img src="images/nightshift.jpg" alt="Night Shift Legends Cover" class="card-img">
                 </div>
                 <div class="card-body">
                     <h3>Night Shift Legends</h3>
@@ -80,7 +79,7 @@
             <!-- Card 2 -->
             <article class="card">
                 <div class="card-image">
-                    <div class="card-placeholder" aria-label="Barnoosko Crew cover art">Cover Art</div>
+                    <img src="images/barnoosko.jpg" alt="Barnoosko Crew Cover" class="card-img">
                 </div>
                 <div class="card-body">
                     <h3>Barnoosko Crew</h3>
@@ -91,13 +90,14 @@
             <!-- Card 3 -->
             <article class="card">
                 <div class="card-image">
-                    <div class="card-placeholder" aria-label="Zero-Alarm Mornings cover art">Cover Art</div>
+                    <img src="images/zeroalarm.jpg" alt="Zero-Alarm Mornings Cover" class="card-img">
                 </div>
                 <div class="card-body">
                     <h3>Zero-Alarm Mornings</h3>
                     <p>Short comic strips about life without a boss — the good and the messy.</p>
                 </div>
             </article>
+
         </div>
     </section>
 
@@ -142,10 +142,8 @@
 </div>
 
 <script>
-    // set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // prevent form from actually submitting while prototyping
     document.getElementById('contact-form').addEventListener('submit', function (e) {
         e.preventDefault();
         alert('Thanks for your message! (Form demo only)');
