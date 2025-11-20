@@ -24,38 +24,24 @@ body {
     top: 0;
     z-index: 50;
     display: flex;
-    flex-direction: column; /* CENTERED */
-    align-items: center;    /* CENTERED */
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 5vw;
     background: rgba(5, 6, 10, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
 }
 
-.logo {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: 4px;
-}
-
-.logo-img {
-    height: 55px;
-    width: auto;
-}
-
-.logo-text {
+.logo span {
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     font-size: 1.1rem;
 }
 
 .main-nav {
     display: flex;
-    gap: 1.4rem;
-    justify-content: center; /* CENTER THE NAV */
+    gap: 1.2rem;
 }
 
 .main-nav a {
@@ -78,6 +64,14 @@ body {
     gap: 3rem;
     padding: 4rem 5vw 3rem;
     align-items: center;
+}
+
+/* logo in hero above title */
+.hero-logo {
+    height: 120px;   /* change size if needed */
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 .hero-text h1 {
@@ -109,17 +103,19 @@ body {
     font-size: 0.95rem;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
 .btn.primary {
     background: linear-gradient(135deg, #ff4b9a, #ffb347);
     color: #05060a;
     font-weight: 600;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 .btn.primary:hover {
     transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
 }
 
 .btn.secondary {
@@ -128,11 +124,15 @@ body {
     color: #f7f7ff;
 }
 
+.btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
 .btn.full-width {
     width: 100%;
 }
 
-/* ========= HERO IMAGE ========= */
+/* Hero image placeholder */
 .hero-image {
     display: flex;
     justify-content: center;
@@ -149,6 +149,8 @@ body {
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 /* ========= SECTIONS ========= */
@@ -182,12 +184,17 @@ body {
     background: #10111a;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     min-height: 220px;
-    transition: 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.18);
 }
 
 .card-image {
@@ -202,6 +209,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.85rem;
+    opacity: 0.75;
 }
 
 .card-body {
@@ -209,10 +218,11 @@ body {
 }
 
 .card-body h3 {
+    font-size: 1.1rem;
     margin: 0.6rem 0 0.3rem;
 }
 
-/* ========= JOIN ========= */
+/* ========= JOIN / FORM ========= */
 .join-section {
     display: grid;
     gap: 2rem;
@@ -223,6 +233,7 @@ body {
     background: #10111a;
     border-radius: 18px;
     padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .form-row {
@@ -232,6 +243,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.form-row label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
 .form-row input,
 .form-row textarea {
     border-radius: 10px;
@@ -239,11 +255,52 @@ body {
     padding: 0.5rem 0.7rem;
     background: transparent;
     color: #f7f7ff;
+    font: inherit;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+    opacity: 0.6;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #ff4b9a;
+}
+
+.contact-extra {
+    font-size: 0.95rem;
+    opacity: 0.9;
 }
 
 /* ========= FOOTER ========= */
 .site-footer {
     padding: 1.5rem 5vw 2rem;
     text-align: center;
+    font-size: 0.85rem;
     opacity: 0.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 3rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+    }
 }
