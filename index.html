@@ -26,6 +26,7 @@
     <!-- ============ HERO SECTION ============ -->
     <section id="home" class="hero">
         <div class="hero-text">
+            <!-- LOGO ABOVE THE BIG TITLE -->
             <img src="logo.png" alt="barnoosko logo" class="hero-logo">
 
             <h1>barnoosko</h1>
@@ -37,7 +38,8 @@
         </div>
 
         <div class="hero-image">
-            <div class="hero-placeholder">
+            <!-- replace with your own banner art -->
+            <div class="hero-placeholder" aria-label="Comic art coming soon">
                 <span>Comic Art Coming Soon</span>
             </div>
         </div>
@@ -56,7 +58,7 @@
         </p>
     </section>
 
-    <!-- ============ COMICS SECTION ============ -->
+    <!-- ============ COMICS / JOB SECTION ============ -->
     <section id="comics" class="section">
         <h2>Our Comics</h2>
         <p class="section-intro">
@@ -64,11 +66,12 @@
         </p>
 
         <div class="card-grid">
-
-            <!-- Card 1 -->
+            <!-- Card 1 – Comic with cover -->
             <article class="card">
                 <div class="card-image">
-                    <img src="images/nightshift.jpg" alt="Night Shift Legends Cover" class="card-img">
+                    <div class="card-placeholder" aria-label="Night Shift Legends cover art">
+                        <img src="images/nightshift.jpg" alt="Night Shift Legends Cover" class="card-img">
+                    </div>
                 </div>
                 <div class="card-body">
                     <h3>Night Shift Legends</h3>
@@ -76,10 +79,12 @@
                 </div>
             </article>
 
-            <!-- Card 2 -->
+            <!-- Card 2 – Comic with cover -->
             <article class="card">
                 <div class="card-image">
-                    <img src="images/barnoosko.jpg" alt="Barnoosko Crew Cover" class="card-img">
+                    <div class="card-placeholder" aria-label="Barnoosko Crew cover art">
+                        <img src="images/barnoosko-crew.jpg" alt="Barnoosko Crew Cover" class="card-img">
+                    </div>
                 </div>
                 <div class="card-body">
                     <h3>Barnoosko Crew</h3>
@@ -87,17 +92,26 @@
                 </div>
             </article>
 
-            <!-- Card 3 -->
+            <!-- Card 3 – JOB CARD -->
             <article class="card">
                 <div class="card-image">
-                    <img src="images/zeroalarm.jpg" alt="Zero-Alarm Mornings Cover" class="card-img">
+                    <div class="card-placeholder" aria-label="Apply for Job cover">
+                        <!-- your job image here -->
+                        <img src="images/job-cover.jpg" alt="Apply for job at barnoosko" class="card-img">
+                    </div>
                 </div>
                 <div class="card-body">
-                    <h3>Zero-Alarm Mornings</h3>
-                    <p>Short comic strips about life without a boss — the good and the messy.</p>
+                    <h3>Work at barnoosko</h3>
+                    <p>Join our team of storytellers, artists, and night-owl creatives.</p>
+
+                    <!-- APPLY BUTTON (change the href URL to your job link) -->
+                    <a href="https://your-job-link.com"
+                       class="btn primary full-width job-btn"
+                       target="_blank" rel="noopener">
+                        Apply for Job
+                    </a>
                 </div>
             </article>
-
         </div>
     </section>
 
@@ -142,8 +156,10 @@
 </div>
 
 <script>
+    // set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // prevent form from actually submitting while prototyping
     document.getElementById('contact-form').addEventListener('submit', function (e) {
         e.preventDefault();
         alert('Thanks for your message! (Form demo only)');
