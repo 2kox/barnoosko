@@ -259,4 +259,57 @@ body {
 
 .form-row input,
 .form-row textarea {
-    border-ra
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.7rem;
+    background: transparent;
+    color: #f7f7ff;
+    font: inherit;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+    opacity: 0.6;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    outline: none;
+    border-color: #ff4b9a;
+}
+
+.contact-extra {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ========= FOOTER ========= */
+.site-footer {
+    padding: 1.5rem 5vw 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 3rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+    }
+}
