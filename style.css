@@ -68,12 +68,11 @@ body {
 
 /* logo in hero above title */
 .hero-logo {
-    height: 180px;        /* BIGGER LOGO */
+    height: 180px;
     width: auto;
     display: block;
-
-    margin-bottom: 2rem;  /* SPACE under logo */
-    margin-top: -40px;    /* MOVE LOGO UP */
+    margin-bottom: 2rem;
+    margin-top: -40px;
 }
 
 .hero-text h1 {
@@ -105,7 +104,8 @@ body {
     font-size: 0.95rem;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease,
+                background-color 0.15s ease, color 0.15s ease;
 }
 
 .btn.primary {
@@ -183,7 +183,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 220px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+                border-color 0.2s ease;
 }
 
 .card:hover {
@@ -205,7 +206,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* keeps image inside the frame */
+    overflow: hidden;
 }
 
 /* image inside box */
@@ -244,26 +245,13 @@ body {
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.06);
 }
-/* ========= JOIN / FORM ========= */
-.join-section {
-    display: grid;
-    gap: 2rem;
-}
 
-.contact-form {
-    max-width: 420px;
-    background: #10111a;
-    border-radius: 18px;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-/* ADD THIS HERE 👇 */
+/* status text under button */
 .form-status {
     margin-top: 0.8rem;
     font-size: 0.9rem;
     opacity: 0.95;
-    color: #8ae58a; /* soft green success color */
+    color: #8ae58a; /* soft green */
 }
 
 .form-row {
@@ -334,4 +322,3 @@ body {
         flex-wrap: wrap;
     }
 }
-
