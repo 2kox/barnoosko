@@ -15,7 +15,7 @@
             <span>barnoosko</span>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#comics">Comics</a>
@@ -39,7 +39,7 @@
 
         <div class="hero-image">
             <!-- replace with your own banner art -->
-            <div class="hero-placeholder">
+            <div class="hero-placeholder" aria-label="Comic art coming soon">
                 <span>Comic Art Coming Soon</span>
             </div>
         </div>
@@ -69,7 +69,7 @@
             <!-- Card 1 -->
             <article class="card">
                 <div class="card-image">
-                    <div class="card-placeholder">Cover Art</div>
+                    <div class="card-placeholder" aria-label="Night Shift Legends cover art">Cover Art</div>
                 </div>
                 <div class="card-body">
                     <h3>Night Shift Legends</h3>
@@ -80,7 +80,7 @@
             <!-- Card 2 -->
             <article class="card">
                 <div class="card-image">
-                    <div class="card-placeholder">Cover Art</div>
+                    <div class="card-placeholder" aria-label="Barnoosko Crew cover art">Cover Art</div>
                 </div>
                 <div class="card-body">
                     <h3>Barnoosko Crew</h3>
@@ -91,7 +91,7 @@
             <!-- Card 3 -->
             <article class="card">
                 <div class="card-image">
-                    <div class="card-placeholder">Cover Art</div>
+                    <div class="card-placeholder" aria-label="Zero-Alarm Mornings cover art">Cover Art</div>
                 </div>
                 <div class="card-body">
                     <h3>Zero-Alarm Mornings</h3>
@@ -108,7 +108,7 @@
             Want to read early, collaborate, or just say hi? Send us a message.
         </p>
 
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
             <div class="form-row">
                 <label for="name">Name</label>
                 <input id="name" type="text" placeholder="Your name">
@@ -136,7 +136,7 @@
 
     <!-- ============ FOOTER ============ -->
     <footer class="site-footer">
-        <p> <span id=""></span> © Barnoosko</p>
+        <p><span id="year"></span> © Barnoosko</p>
     </footer>
 
 </div>
@@ -144,11 +144,12 @@
 <script>
     // set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // prevent form from actually submitting while prototyping
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thanks for your message! (Form demo only)');
+    });
 </script>
 </body>
 </html>
-
-
-
-
-
