@@ -32,7 +32,20 @@ body {
     backdrop-filter: blur(12px);
 }
 
-.logo span {
+/* logo: image above text */
+.logo {
+    display: flex;
+    flex-direction: column; /* image on top, text under */
+    align-items: center;
+    gap: 4px;
+}
+
+.logo-img {
+    height: 55px; /* change this value to make logo bigger/smaller */
+    width: auto;
+}
+
+.logo-text {
     font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
