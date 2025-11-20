@@ -68,10 +68,12 @@ body {
 
 /* logo in hero above title */
 .hero-logo {
-    height: 120px;   /* change size if needed */
+    height: 180px;        /* BIGGER LOGO */
     width: auto;
-    margin-bottom: 1rem;
     display: block;
+
+    margin-bottom: 2rem;  /* SPACE under logo */
+    margin-top: -40px;    /* MOVE LOGO UP */
 }
 
 .hero-text h1 {
@@ -304,3 +306,4 @@ body {
         flex-wrap: wrap;
     }
 }
+
